@@ -3,15 +3,15 @@ exports.DELIMITER = new RegExp('\r?\n')
 exports.FWD = new RegExp("^[-]+[ ]*Forwarded message[ ]*[-]+$", 'im')
 
 # On {date}, {somebody} wrote:
-exports.ON_DATE_SMB_WROTE = new RegExp("(-*[>]?[ ]?(On|Le|W dniu|Op|Am|P\xe5|Den)[ ].*(,|u\u017cytkownik)(.*\n){0,2}.*(wrote|sent|a \xe9crit|napisa\u0142|schreef|verzond|geschreven|schrieb|skrev):?-*)")
+exports.ON_DATE_SMB_WROTE = new RegExp("(-*[>]?[ ]?(On|Le|W dniu|Op|Am|P\xe5|Den|Il giorno gio)[ ].*(,|u\u017cytkownik)(.*\n){0,2}.*(wrote|sent|a \xe9crit|napisa\u0142|schreef|verzond|geschreven|schrieb|skrev|scritto):?-*)")
 # On {date} wrote {somebody}:
-exports.ON_DATE_WROTE_SMB = new RegExp('(-*[>]?[ ]?(Op|Am)[ ].*(.*\n){0,2}.*(schreef|verzond|geschreven|schrieb)[ ]*.*:)')
+exports.ON_DATE_WROTE_SMB = new RegExp('(-*[>]?[ ]?(Op|Am|Il giorno gio)[ ].*(.*\n){0,2}.*(schreef|verzond|geschreven|schrieb|scritto)[ ]*.*:)')
 
 exports.QUOTATION = new RegExp('((?:s|(?:me*){2,}).*me*)[te]*$')
 exports.EMPTY_QUOTATION = new RegExp('((?:s|(?:me*){2,}))e*')
 
 exports.ORIGINAL_MESSAGE = new RegExp('[\\s]*[-]+[ ]*(Original Message|Reply Message|Urspr\xfcngliche Nachricht|Antwort Nachricht|Oprindelig meddelelse)[ ]*[-]+', 'i')
-exports.FROM_COLON_OR_DATE_COLON = new RegExp('(_+\r?\n)?[\\s]*(:?[*]?From|Van|De|Von|Fra|Fr\xe5n|Date|Datum|Envoy\xe9|Skickat|Sendt)[\\s]?:[*]? .*', 'i')
+exports.FROM_COLON_OR_DATE_COLON = new RegExp('(_+\r?\n)?[\\s]*(:?[*]?From|Van|De|Von|Fra|Fr\xe5n|Date|Datum|Envoy\xe9|Skickat|Sendt|Da)[\\s]?:[*]? .*', 'i')
 
 exports.DATE_PERSON = new RegExp('(\\d+/\\d+/\\d+|\\d+\\.\\d+\\.\\d+).*@')
 exports.SPELLED_OUT_DATE = new RegExp('\\S{3,10}, \\d\\d? \\S{3,10} 20\\d\\d,? \\d\\d?:\\d\\d(:\\d\\d)?( \\S+){3,6}@\\S+:')
