@@ -3,9 +3,9 @@ exports.DELIMITER = new RegExp('\r?\n')
 exports.FWD = new RegExp("^[-]+[ ]*Forwarded message[ ]*[-]+$", 'im')
 
 # On {date}, {somebody} wrote:
-exports.ON_DATE_SMB_WROTE = new RegExp("(-*[>]?[ ]?(On|Le|W dniu|Op|Am|P\xe5|Den|Il giorno gio)[ ].*(,|u\u017cytkownik)(.*\n){0,2}.*(wrote|sent|a \xe9crit|napisa\u0142|schreef|verzond|geschreven|schrieb|skrev|scritto):?-*)")
+exports.ON_DATE_SMB_WROTE = new RegExp("(-*[>]?[ ]?(On|Le|W dniu|Op|Am|P\xe5|Den|Il giorno)[ ].*(,|u\u017cytkownik)(.*\n){0,2}.*(wrote|sent|a \xe9crit|napisa\u0142|schreef|verzond|geschreven|schrieb|skrev|scritto):?-*)")
 # On {date} wrote {somebody}:
-exports.ON_DATE_WROTE_SMB = new RegExp('(-*[>]?[ ]?(Op|Am|Il giorno gio)[ ].*(.*\n){0,2}.*(schreef|verzond|geschreven|schrieb|scritto)[ ]*.*:)')
+exports.ON_DATE_WROTE_SMB = new RegExp('(-*[>]?[ ]?(Op|Am|Il giorno)[ ].*(.*\n){0,2}.*(schreef|verzond|geschreven|schrieb|scritto)[ ]*.*:)')
 
 exports.QUOTATION = new RegExp('((?:s|(?:me*){2,}).*me*)[te]*$')
 exports.EMPTY_QUOTATION = new RegExp('((?:s|(?:me*){2,}))e*')
